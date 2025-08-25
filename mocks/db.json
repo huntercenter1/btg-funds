@@ -1,0 +1,140 @@
+{
+  "funds": [
+    {
+      "id": 1,
+      "name": "FPV_BTG_PACTUAL_RECAUDADORA",
+      "minAmount": 75000,
+      "category": "FPV"
+    },
+    {
+      "id": 2,
+      "name": "FPV_BTG_PACTUAL_ECOPETROL",
+      "minAmount": 125000,
+      "category": "FPV"
+    },
+    {
+      "id": 3,
+      "name": "DEUDAPRIVADA",
+      "minAmount": 50000,
+      "category": "FIC"
+    },
+    {
+      "id": 4,
+      "name": "FDO-ACCIONES",
+      "minAmount": 250000,
+      "category": "FIC"
+    },
+    {
+      "id": 5,
+      "name": "FPV_BTG_PACTUAL_DINAMICA",
+      "minAmount": 100000,
+      "category": "FPV"
+    }
+  ],
+  "wallet": [
+    {
+      "id": 1,
+      "balance": 350000
+    }
+  ],
+  "positions": [
+    {
+      "fundId": 2,
+      "amount": 150000,
+      "id": 1
+    }
+  ],
+  "transactions": [
+    {
+      "type": "SUBSCRIPTION",
+      "fundId": 5,
+      "amount": 100000,
+      "notification": "sms",
+      "date": "2025-08-25T03:46:08.641Z",
+      "id": 1
+    },
+    {
+      "type": "SUBSCRIPTION",
+      "fundId": 1,
+      "amount": 100000,
+      "notification": "email",
+      "date": "2025-08-25T03:55:06.681Z",
+      "id": 2
+    },
+    {
+      "type": "SUBSCRIPTION",
+      "fundId": 2,
+      "amount": 125000,
+      "notification": "sms",
+      "date": "2025-08-25T04:09:52.874Z",
+      "id": 3
+    },
+    {
+      "type": "CANCELLATION",
+      "fundId": 2,
+      "amount": 125000,
+      "date": "2025-08-25T04:11:28.008Z",
+      "id": 4
+    },
+    {
+      "type": "SUBSCRIPTION",
+      "fundId": 5,
+      "amount": 120000,
+      "notification": "email",
+      "date": "2025-08-25T04:47:05.835Z",
+      "id": 5
+    },
+    {
+      "type": "CANCELLATION",
+      "fundId": 1,
+      "amount": 100000,
+      "date": "2025-08-25T05:33:00.695Z",
+      "id": 6
+    },
+    {
+      "type": "CANCELLATION",
+      "fundId": 5,
+      "amount": 220000,
+      "date": "2025-08-25T05:34:31.581Z",
+      "id": 7
+    },
+    {
+      "type": "SUBSCRIPTION",
+      "fundId": 2,
+      "amount": 200000,
+      "notification": "email",
+      "date": "2025-08-25T05:34:45.720Z",
+      "id": 8
+    },
+    {
+      "type": "CANCELLATION",
+      "fundId": 2,
+      "amount": 200000,
+      "date": "2025-08-25T06:21:05.976Z",
+      "id": 9
+    },
+    {
+      "type": "SUBSCRIPTION",
+      "fundId": 1,
+      "amount": 111111,
+      "notification": "email",
+      "date": "2025-08-25T06:25:07.539Z",
+      "id": 10
+    },
+    {
+      "type": "CANCELLATION",
+      "fundId": 2,
+      "amount": 200000,
+      "date": "2025-08-25T06:31:12.996Z",
+      "id": 11
+    },
+    {
+      "type": "SUBSCRIPTION",
+      "fundId": 2,
+      "amount": 150000,
+      "notification": "email",
+      "date": "2025-08-25T06:40:24.100Z",
+      "id": 12
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+<div class="toolbar-shell">
+  <mat-toolbar class="toolbar floating">
+    <span class="GrandTitle">Manejo de Fondos - BTG Funds</span>
+    <span class="spacer"></span>
+    <span *ngIf="balance$ | async as bal" class="balance-chip"
+      >Saldo: {{ bal | currency : 'COP' : 'symbol' : '1.0-0' }}</span
+    >
+    <a mat-button routerLink="/funds" routerLinkActive="active">Fondos</a>
+    <a mat-button routerLink="/history" routerLinkActive="active">Historial</a>
+  </mat-toolbar>
+</div>
+<router-outlet />

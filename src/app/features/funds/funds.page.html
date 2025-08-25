@@ -1,0 +1,22 @@
+<section class="grid">
+  @for (f of funds; track f.id) {
+  <mat-card class="fund">
+    <mat-card-title>{{ f.name }}</mat-card-title>
+    <mat-card-subtitle>
+      <span class="category-chip">{{ f.category }}</span>
+    </mat-card-subtitle>
+    <mat-card-content>
+      <div>Mínimo: {{ f.minAmount | currency : 'COP' : 'symbol' : '1.0-0' }}</div>
+
+      @if (amountInvested(f.id); as inv) {
+      <div>Invertido: {{ inv | currency : 'COP' : 'symbol' : '1.0-0' }}</div>
+      }
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-raised-button (click)="openSubscribe(f)">Suscribirme</button>
+      <button mat-button (click)="cancel(f)" [disabled]="!hasPosition(f.id)">Cancelar</button>
+    </mat-card-actions>
+  </mat-card>
+  }
+</section>

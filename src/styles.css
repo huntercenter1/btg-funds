@@ -1,0 +1,88 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  background: #fafafa;
+}
+@media (max-width: 599px) {
+  .mat-mdc-card {
+    margin: 0 4px;
+  }
+}
+
+/* ====== Paleta y tokens ligeros ====== */
+:root {
+  --card-radius: 16px;
+  --card-gap: 16px;
+  --elev-1: 0 6px 20px rgba(0, 0, 0, 0.08);
+  --elev-2: 0 10px 28px rgba(0, 0, 0, 0.12);
+  --accent: #1976d2; /* azul Material por defecto */
+  --accent2: #1976d2; /* azul Material por defecto */
+  --text-muted: #6b7280; /* gris */
+  --surface: #ffffff;
+  --hover-surface: #f3f7ff; /* claro suave */
+  --active-surface: #e7f0ff;
+  --title-high: #1e2934;
+  --button-back: ;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --elev-1: 0 6px 20px rgba(0, 0, 0, 0.6);
+    --elev-2: 0 10px 28px rgba(0, 0, 0, 0.7);
+    --surface: #576374;
+    --text-muted: #9ca3af;
+    --accent: #ada59c;
+    --accent2: #726f6c;
+    --hover-surface: #223046; /* tonos fríos en dark */
+    --active-surface: #1c2738;
+    --title-high: #ece1d6;
+    --button-back: #ece1d6;
+  }
+}
+
+/* Panel del diálogo con clase extra */
+.mat-mdc-dialog-panel.btg-dialog .mdc-dialog__surface {
+  /* glass + borde + sombra coherentes con toolbar/cards */
+  border-radius: 16px;
+  background: color-mix(in hsl, var(--surface, #ffffff) 86%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+
+  /* animación suave de entrada */
+  animation: btgIn 0.18s ease-out;
+}
+
+@keyframes btgIn {
+  from {
+    transform: translateY(6px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* padding interno más cómodo */
+.mat-mdc-dialog-content {
+  padding: 0 24px 8px;
+}
+.mat-mdc-dialog-actions {
+  padding: 0 24px 20px;
+}
+
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+  .mat-mdc-dialog-panel.btg-dialog .mdc-dialog__surface {
+    background: color-mix(in hsl, var(--surface, #1f2937) 88%, transparent);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 14px 42px rgba(0, 0, 0, 0.55);
+  }
+}

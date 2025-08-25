@@ -1,0 +1,78 @@
+/* --- contenedor del contenido --- */
+.dialog-content {
+  display: grid;
+  gap: 16px;
+  min-width: min(520px, 92vw);
+  padding-top: 4px !important;
+  color: var(--title-high);
+}
+
+/* título: clamp + truncado a 2 líneas si es larguísimo */
+.dialog-title {
+  font-size: clamp(1rem, 0.95rem + 0.4vw, 1.25rem);
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--title-high);
+}
+
+/* form y acciones */
+.form {
+  display: contents; /* deja que dialog-content/dialog-actions organicen */
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.button-cancel {
+  color: var(--title-high);
+}
+
+.dialog-actions {
+  display: flex;
+  gap: 12px;
+  padding: 8px 0 4px;
+  border-top: 1px dashed rgba(0, 0, 0, 0.08);
+}
+
+/* botón confirmar con spinner dentro */
+.confirm-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--button-back);
+  color: var(--accent2);
+  font-weight: 600;
+}
+
+.confirm-btn[disabled] {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--button-back);
+  color: var(--accent2);
+  font-weight: 600;
+  opacity: 0.2;
+}
+
+/* helppers y errores un poco más limpios */
+.mat-mdc-form-field-hint {
+  color: var(--text-muted, #6b7280);
+}
+
+.mat-mdc-form-field-error {
+  font-weight: 600;
+}
+
+/* dark mode ligero para el contenido interno */
+@media (prefers-color-scheme: dark) {
+  .dialog-actions {
+    border-top-color: rgba(255, 255, 255, 0.08);
+  }
+}
